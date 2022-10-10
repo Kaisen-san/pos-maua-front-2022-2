@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+input {
+  padding: 4px 8px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, .2);
+  transition: background-color 300ms ease-in-out;
+}
+
+button:hover,
+input:hover {
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc {
+  width: max-content;
+}
+
+.calc-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.calc-inputs input {
+  margin-bottom: 8px;
+}
+
+.calc-operators {
+  display: flex;
+  justify-content: space-between;
+}

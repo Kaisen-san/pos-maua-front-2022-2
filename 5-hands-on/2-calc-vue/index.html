@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Vue</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <main id="app" class="calc">
+      <div class="calc-inputs">
+        <input v-model="number" ref="number" @keyup.enter="enter" type="text" placeholder="Digite um número" autofocus>
+        <input v-model="result" type="text" placeholder="Resultado" readonly>
+      </div>
+      <div class="calc-operators">
+        <button v-on:click="add">&plus;</button>
+        <button @click="sub">&minus;</button>
+        <button @click="mult">&times;</button>
+        <button @click="div">&divide;</button>
+        <button @click="clear">&#9003;</button>
+      </div>
+    </main>
+  </div>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

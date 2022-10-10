@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      background: yellow;
+    }
+
+    .block {
+      width: 100px;
+      height: 100px;
+      /* display: inline-block; */
+      border: 2px dashed black;
+    }
+
+    .block:nth-child(1) {
+      background-color: red;
+      padding: 20px 10px;
+      /* text-align: center; */
+    }
+
+    .block:nth-child(1) span {
+      /* position: relative;
+      top: calc(50px - 8px); */
+      /* display: block;
+      margin-top: 50px;
+      transform: translateY(-50%); */
+    }
+
+    .block:nth-child(2) {
+      background-color: green;
+      margin: 10px 5px;
+    }
+
+    .block:nth-child(3) {
+      background-color: blue;
+      /* margin: 20px 10px; */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="block">1</div>
+    <div class="block">2</div>
+    <div class="block">3</div>
+  </div>
+</body>
+</html>
