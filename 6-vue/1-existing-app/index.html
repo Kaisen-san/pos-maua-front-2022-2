@@ -1,0 +1,57 @@
+<html>
+<head>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <!--Código HTML... -->
+  <div id="comments" style="background-color: coral;">
+    <ul>
+      <li v-for="c in commenters">
+        <h3>{{ c.nickname }}</h3>
+        <p>{{ c.comment }}</p>
+      </li>
+    </ul>
+  </div>
+  <div id="more_comments" style="background-color: chartreuse;">
+    <ul>
+      <li v-for="c in commenters">
+        <h3>{{ c.nickname }}</h3>
+        <p>{{ c.comment }}</p>
+      </li>
+    </ul>
+  </div>
+  <!-- Mais código HTML... -->
+
+  <script>
+    // Código JavaScript...
+    const { createApp } = Vue
+
+    const app = createApp({
+      data() {
+        return {
+          commenters: [
+            { nickname: 'John Doe', comment: 'Hello Vue!' },
+            { nickname: 'João da Silva', comment: 'Olá Mauá!' }
+          ]
+        }
+      }
+    })
+
+    app.mount('#comments')
+
+    const app2 = createApp({
+      data() {
+        return {
+          commenters: [
+            { nickname: 'Murilo Zanini', comment: 'Oi pessoal!' },
+            { nickname: 'Maria da Silva', comment: 'Olá pós-graduandos!' }
+          ]
+        }
+      }
+    })
+
+    app2.mount('#more_comments')
+    // Mais código JavaScript...
+  </script>
+</body>
+</html>
